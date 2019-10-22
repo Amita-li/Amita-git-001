@@ -1,3 +1,5 @@
+#版本1.0 简单功能实现
+
 # 工时计算
 def estimated_time(size,number):
     time = size*80 / number
