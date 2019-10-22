@@ -19,3 +19,19 @@ estimated(size=0.5,time=20.0)
 
 
 #方法2，设定一个参数type判定是进行工时计算还是人力计算，固定的size参数，other代表已知的另外一个参数，根据type判定类型
+import math
+
+def estimated(types,size,other):
+    # 人力计算
+    if types == 1:
+        number = math.ceil(size * 80 / other)
+        print('项目大小为%.1f个标准项目，如果需要在%.1f个工时完成，则需要人力数量为：%d人' %(size,other,number)) 
+    # 工时计算
+    elif types == 2:
+        time = size * 80 / other
+        print('项目大小为%.1f个标准项目，使用%d个人力完成，则需要工时数量为：%.1f个' %(size,other,time))  
+
+estimated(1, 1.5, 2)
+# 结果：项目大小为1.5个标准项目，如果需要在2.0个工时完成，则需要人力数量为：60人
+estimated(2, 1.5, 2)
+# 结果：项目大小为1.5个标准项目，使用2个人力完成，则需要工时数量为：60.0个
