@@ -1,3 +1,4 @@
+#计算人力时向上取整
 import math
 
 # 工时计算
@@ -14,3 +15,6 @@ def estimated_number(size,time):
 estimated_time(1.5,2)
 # 调用人力计算函数
 estimated_number(1,60)
+
+
+#精简代码
